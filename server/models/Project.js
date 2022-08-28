@@ -13,7 +13,7 @@ const ProjectSchema = new mongoose.Schema({
     },
     ClientID: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Client',
+        ref: 'Client'
     }
 });
 
