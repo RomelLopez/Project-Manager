@@ -1,5 +1,5 @@
 const express = require('express');
-require('dotenv').config();
+require("dotenv").config();
 const path = require("path");
 const { graphqlHTTP } = require('express-graphql');
 const schema = require('./schema/schema');
@@ -17,7 +17,7 @@ app.use(cors());
 app.use('/graphql',
     graphqlHTTP({
         schema,
-        graphiql: process.env.NODE_ENV === 'development'
+        graphiql: process.env.NODE_ENV === 'production'
     }))
 
 if (process.env.NODE_ENV === "production") {
